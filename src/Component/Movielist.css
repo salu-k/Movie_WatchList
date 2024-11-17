@@ -1,5 +1,23 @@
-.movie-list{
+
+.movie-list {
     display: flex;
     flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
-}
+    padding: 16px;
+  }
+  
+  
+  .movie-item {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .movie-item {
+      padding: 4px;
+    }
+  }
+  

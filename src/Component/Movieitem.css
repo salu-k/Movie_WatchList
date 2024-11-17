@@ -6,7 +6,6 @@
     box-shadow:0 2px 4px rgba(0,0,0,0.1) ;
     text-align: center;
 }
-
 .movie-item image{
     max-width: 100%;
     border-radius: 4px;
@@ -21,3 +20,17 @@
     background-color: #61dafb;
     cursor: pointer;
 }
+
+ 
+  .movie-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .movie-item p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+ 
+  
