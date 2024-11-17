@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Searchbar from '../Component/Searchbar'
 import Movielist from '../Component/Movielist'
+
 import axios from 'axios'
 import './Home.css'
 
@@ -12,9 +13,12 @@ function Home() {
         localStorage.setItem('watchlist',JSON.stringify(updatedList))
     }
     const handleSearch=async(query)=>{
+        console.log('Searching for:', query);
         try{
-            const API_KEY=process.env.movie_watchlist_OMDB_API_KEY;
-            const response=await axios.get(`http://www.omdbapi.com/?s=${query}&apikey=${API_KEY}`)
+            
+            console.log("Searching for :",{query})
+            const response=await axios.get(`http://www.omdbapi.com/?s=${query}&apikey=${process.env.REACT_APP_API_KEY}`)
+            console.log('API Response:', response.data);
         setMovies(response.data.Search || [])
         }
         catch(error){

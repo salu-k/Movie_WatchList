@@ -8,8 +8,8 @@ function Sidebar() {
   return (
     <div className='sidebar'>
       <h1>Watch Lists</h1>
-      <NavLink to='/' activeClassName='active'>Home</NavLink><br/>
-      <NavLink to='/MyList' activeClassName='active'>MyList</NavLink>
+      <NavLink to='/' className={({isActive})=> (isActive ? "active" : "inactive")}>Home</NavLink><br/>
+      <NavLink to='/MyList' className={({isActive})=> (isActive ? "active" : "inactive")}>MyList</NavLink>
       <div className='user'>
         
       </div>

@@ -8,12 +8,12 @@ function Movieitem({movie,onAddToWatchlist}) {
   }
   return (
     <div className='movie-item'>
-      <h3>{movie.title}</h3>
-      <p>{movie.year}</p>
-      <img src={movie.poster} alt={movie.title}/>
+      <h3>{movie.Title}</h3>
+      <p>{movie.Year}</p>
+      <img src={movie.Poster} alt={movie.Title}/>
       <button onClick={(e)=>onAddToWatchlist(movie)}
-       disabled={isInWatchlist(movie)}>
-        {isInWatchlist(movie)? "Added":"Add to Watchlist"}
+       disabled={isInWatchlist()}>
+        {isInWatchlist()? "Added":"Add to Watchlist"}
        </button>
     </div>
   )

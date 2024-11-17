@@ -5,7 +5,13 @@ import { useState } from 'react'
 function Searchbar({onSearch}) {
   const[query,setQuery]=useState('')
   const handleclick=()=>{
-    onSearch(query)
+    if(query.trim().length >0){
+      onSearch(query)
+    }
+    else{
+      alert("Please enter a search term")
+    }
+    
   }
   return (
     <div className='search-bar'>
@@ -14,7 +20,7 @@ function Searchbar({onSearch}) {
         placeholder='Search Movies'
         value={query}
         onChange={(e)=>{setQuery(e.target.value)}}/>
-        <button onClick={handleclick}>Search</button>
+        <button  disabled={false} onClick={handleclick}>Search</button>
     </div>
   )
 }

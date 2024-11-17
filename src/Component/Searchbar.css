@@ -17,4 +17,6 @@
     color: white;
     cursor: pointer;
     margin-left: 10px;
+    pointer-events: auto;
+    z-index: 1;
 }

@@ -4,7 +4,7 @@ import './Movielist.css'
 
 function Movielist({movies,onAddToWatchlist}) {
   if(!movies || movies.length===0){
-    <p>No movies to display,Try to explore something</p>
+    return <p>No movies to display,Try to explore something</p>
   }
   return (
     <div className='movie-list'>
