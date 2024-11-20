@@ -6,8 +6,8 @@ function Movieitem({movie,onAddToWatchlist}) {
   const isInWatchlist=()=>{
     // Retrieve the current watchlist from localStorage, defaulting to an empty array if not found
     const currentList=JSON.parse(localStorage.getItem('watchlist')) || []
-    //  Check if any movie in the watchlist matches the current movie's omdbID
-  return currentList.some((item)=>item.omdbID===movie.omdbID)
+    //  Check if any movie in the watchlist matches the current movie's imdbID
+  return currentList.some((item)=>item.imdbID===movie.imdbID)
   }
   return (
     <div className='movie-item'>

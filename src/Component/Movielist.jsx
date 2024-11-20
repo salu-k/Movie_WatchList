@@ -9,7 +9,7 @@ function Movielist({movies,onAddToWatchlist}) {
   }
   return (
     <div className='movie-list'>
-      {movies.map((movie,index)=>(<Movieitem key={movie.omdbID || index} // Unique key for each movie item, fallback to index if omdbID is unavailable
+      {movies.map((movie,index)=>(<Movieitem key={movie.imdbID || index} // Unique key for each movie item, fallback to index if imdbID is unavailable
       movie={movie} // Passing the movie object as a prop to Movieitem
       onAddToWatchlist={onAddToWatchlist}/>))}{/* Passing the add-to-watchlist function as a prop*/}
     </div>
