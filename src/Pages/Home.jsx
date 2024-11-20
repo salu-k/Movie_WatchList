@@ -23,7 +23,7 @@ function Home() {
             
             console.log("Searching for :",{query})
             //Make an api call to fetch movies based on the search query
-            const response=await axios.get(`http://www.omdbapi.com/?s=${query}&apikey=${process.env.REACT_APP_API_KEY}`)
+            const response=await axios.get(`https://www.omdbapi.com/?s=${query}&apikey=${process.env.REACT_APP_API_KEY}`)
             console.log('API Response:', response.data);
 
         setMovies(response.data.Search || []) // Update the movies state with the fetched data, or set it to an empty array if no movies are found
